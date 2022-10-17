@@ -3,7 +3,7 @@ const GitHub = require('../models/github');
 const ImageService = require('../service/image-service');
 
 class GitHubController {
-  // http://localhost:3000/api/github/hpcc-systems/Tombolo/issue/505
+  //localhost:3000/api/v1/github/hpcc-systems/Tombolo/issue/505
   async getIssue(req, res, next) {
     try {
       const { owner, repo, issue_number } = req.params;
@@ -19,7 +19,8 @@ class GitHubController {
   }
 
   async getImage(req, res, next) {
-    //localhost:3000/api/v1/github/btholt/complete-intro-to-react-v7/issue/6/image
+    //localhost:3000/api/v1/github/hpcc-systems/Tombolo/issue/505/image - with image
+    //localhost:3000/api/v1/github/hpcc-systems/Tombolo/issue/369/image - without image
     http: try {
       const { owner, repo, issue_number } = req.params;
 
